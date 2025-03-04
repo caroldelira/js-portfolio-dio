@@ -1,0 +1,35 @@
+.portfolio {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.portfolio li {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.portfolio li a {
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.portfolio .tittle {
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin: 0;
+    margin-bottom: .5rem;
+}
+
+.portfolio .tittle::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: .5rem;
+    background-image: url('/assets/icons/logoGithub.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}

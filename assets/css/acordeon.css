@@ -1,0 +1,62 @@
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+    transition: background-color 0.25s ease-in;
+}
+
+.acordeon:hover,
+.acordeon.open {
+    background-color: #55569E;
+    border-color: #55569E;
+}
+
+.acordeon .trigger {
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.acordeon .trigger h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.acordeon .trigger::after {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(/assets/icons/arrowUp.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: .5s;
+}
+
+.acordeon.open .trigger::after {
+    transform: rotate(180deg);
+}
+
+.acordeon .content {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.acordeon.open .content {
+    display: block;
+    height: auto;
+    opacity: 1;
+    padding: 0 1rem 1rem 2rem;
+}

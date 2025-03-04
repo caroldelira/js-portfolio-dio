@@ -1,0 +1,95 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header::after {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-image: url(/assets/img/points.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.header .tittle {
+    text-align: center;
+    font-family: 'fontTittle';
+}
+
+.information {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.information p {
+    display: flex;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.125rem;
+}
+
+.information p::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.information .job::before {
+    background-image: url('/assets/icons/person.png');
+}
+
+.information .location::before {
+    background-image: url('/assets/icons/location.png');
+}
+
+.information .email::before {
+    background-image: url('/assets/icons/email.png');
+}
+
+.information .phone::before {
+    background-image: url('/assets/icons/phone.png');
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-areas:
+        "photo tittle"
+        "photo information"
+        ;
+    }
+
+    .header .photo {
+        grid-area: photo;
+        margin: 0 auto;
+    }
+
+    .header .tittle {
+        grid-area: tittle;
+        text-align: start;
+        max-width: 200px;
+    }
+
+    .header .information {
+        grid-area: information;
+    }
+}
