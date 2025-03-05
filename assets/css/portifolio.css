@@ -14,7 +14,7 @@
     margin-bottom: 2rem;
 }
 
-.portfolio .tittle {
+.portfolio li h3 {
     display: flex;
     align-items: center;
     font-weight: 800;
